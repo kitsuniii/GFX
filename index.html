@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|GFX SITE|</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 20px auto;
+            justify-content: center;
+            gap: 20px;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px;
+        }
+        .content.reverse {
+            flex-direction: row-reverse;
+        }
+        .image-holder {
+            width: 150px;
+            height: 150px;
+            background-color: #ddd;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .image-holder img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 12px;
+        }
+        .text {
+            flex: 1;
+            text-align: center;
+        }
+        .top-image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .top-image {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .top-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .text-box {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .social-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .social-links a:hover {
+            background-color: #0056b3;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        .button-container h2 {
+            margin-bottom: 10px;
+        }
+        .button-container a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">
+            <div class="top-image-container">
+                <div class="top-image">
+                    <img src="https://via.placeholder.com/400" alt="Top Img">
+                </div>
+                <div class="text-box">
+                    <p>GFX</p>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h2>header 1</h2>
+                    <p>This is a description accompanying the img on the right</p>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="content reverse">
+                <div class="text">
+                    <h2>header 2</h2>
+                    <p>This is a description accompanying the img on the left</p>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="image-holder">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <h2>\|/ Think these look cool? want one of your own? \|/</h2>
+        <a href="https://example.com" target="_blank">Click Here</a>
+    </div>
+</body>
+</html>
