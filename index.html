@@ -18,6 +18,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(10px);
             color: #ccc;
+            text-align: center;
         }
         .container {
             display: flex;
@@ -27,6 +28,19 @@
             justify-content: center;
             gap: 20px;
         }
+        .wide-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
         .block {
             display: flex;
             flex-direction: column;
@@ -34,7 +48,6 @@
             width: 100%;
             max-width: 800px;
             background: rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             padding: 20px;
             border-radius: 12px;
             backdrop-filter: blur(20px);
@@ -43,19 +56,20 @@
         .content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 100%;
+            justify-content: center;
+            flex-direction: column;
             gap: 20px;
         }
-        .content.reverse {
-            flex-direction: row-reverse;
+        .image-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
         .image-holder {
             width: 150px;
             height: 150px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 12px;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,128 +81,73 @@
             max-height: 100%;
             border-radius: 12px;
         }
-        .text {
-            flex: 1;
-            text-align: center;
-            color: #ddd;
-        }
-        .top-image-container {
+        .footer-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
-            margin-bottom: 20px;
-        }
-        .top-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 12px;
-        }
-        .text-box {
-            width: 100%;
-            max-width: 600px;
-            padding: 10px;
-            border-radius: 8px;
+            max-width: 800px;
             background: rgba(0, 0, 0, 0.6);
-            text-align: center;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #ddd;
-        }
-        .social-links {
-            margin-top: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .social-links a {
-            text-decoration: none;
-            background-color: rgba(0, 123, 255, 0.7);
-            color: white;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: background-color 0.3s ease;
-        }
-        .social-links a:hover {
-            background-color: rgba(0, 86, 179, 0.7);
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.6);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             padding: 20px;
             border-radius: 12px;
-            max-width: 400px;
-            margin: 20px auto;
-            backdrop-filter: blur(20px);
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
         }
-        .button-container h2 {
-            margin-bottom: 10px;
-            color: #ddd;
+        .button-container {
             text-align: center;
         }
         .button-container a {
+            display: inline-block;
             text-decoration: none;
             background-color: rgba(0, 123, 255, 0.7);
             color: white;
             padding: 10px 20px;
             border-radius: 8px;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         .button-container a:hover {
+            transform: scale(1.2);
             background-color: rgba(0, 86, 179, 0.7);
+        }
+        .button-container a:not(:hover) {
+            transform: scale(0.9);
+        }
+        .center-block {
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <div class="wide-box">
+        <img src="https://via.placeholder.com/150" alt="Top Wide Img">
+        <p>test text</p>
+    </div>
     <div class="container">
         <div class="block">
-            <div class="top-image-container">
-                <div class="top-image">
-                    <img src="https://via.placeholder.com/400" alt="Top Img">
-                </div>
-                <div class="text-box">
-                    <p>GFX</p>
-                </div>
-            </div>
             <div class="content">
-                <div class="text">
-                    <h2>header 1</h2>
-                    <p>This is a description accompanying the img on the right</p>
-                    <div class="social-links">
-                        <p>this user does not have any social links.</p>
+                <h2>Image Section</h2>
+                <div class="image-group">
+                    <div class="image-holder">
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
                     </div>
-                </div>
-                <div class="image-holder">
-                    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
-                </div>
-            </div>
-        </div>
-        <div class="block">
-            <div class="content reverse">
-                <div class="text">
-                    <h2>header 2</h2>
-                    <p>This is a description accompanying the img on the left</p>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
+                    <div class="image-holder">
+                        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
                     </div>
-                </div>
-                <div class="image-holder">
-                    <img src="https://via.placeholder.com/150" alt="Placeholder Image">
                 </div>
             </div>
         </div>
     </div>
-    <div class="button-container">
-        <h2>\|/ Think these look cool? \|/<br>\|/ want one of your own? \|/</h2>
-        <a href="https://example.com" target="_blank">Click Here</a>
+    <div class="footer-container">
+        <div class="button-container">
+            <h2>\|/ Think these look cool? \|/<br>\|/ want one of your own? \|/</h2>
+            <a href="https://example.com" target="_blank">Click Here</a>
+        </div>
+        <div class="center-block">
+            <h2>Additional Details</h2>
+            <p>additional txt</p>
+        </div>
     </div>
 </body>
 </html>
