@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|GFX SITE|</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('https://raw.githubusercontent.com/kitsuniii/GFX/refs/heads/main/img/9b73e5eb-249f-42aa-bdff-a1ef10d56ba3.png') no-repeat center center/cover;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            color: #ccc;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 20px auto;
+            justify-content: center;
+            gap: 20px;
+        }
+        .wide-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 20px;
+        }
+        .button-container {
+            text-align: center;
+        }
+        .button-container a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgba(0, 123, 255, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .button-container a:hover {
+            transform: scale(1.2);
+            background-color: rgba(0, 86, 179, 0.7);
+        }
+        .button-container a:not(:hover) {
+            transform: scale(0.9);
+        }
+        .center-block {
+            text-align: center;
+        }
+        .carousel-container {
+            position: relative;
+            width: 600px;
+            overflow: hidden;
+            margin: auto;
+        }
+        .carousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .carousel-images {
+            display: flex;
+            width: 300%;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-image {
+            width: 33.33%;
+        }
+        .carousel-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .carousel-controls label {
+            width: 12px;
+            height: 12px;
+            background: gray;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #slide1:checked ~ .carousel-images {
+            transform: translateX(0);
+        }
+        #slide2:checked ~ .carousel-images {
+            transform: translateX(-33.33%);
+        }
+        #slide3:checked ~ .carousel-images {
+            transform: translateX(-66.66%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wide-box">
+        <img src="https://via.placeholder.com/150" alt="Top Wide Img">
+        <p><a href="https://kitsuniii.github.io/GFX">Home</a></p>
+        <div class="center-block">
+            <h2>~|--------------------|~</h2>
+                <h1>Post of 3-7-25!</h1>
+            <p>Hejlo! Nothing much happened today, but i still felt like sending out a page update! I was able to figure out that my 3DS was actually returned by the person who found it (thank the demigods omg)! I think it is in the front office somewhere though... I will try getting it soon. <br> Anygays, I was able to bring my switch (see photos from today). I played some Splatoon 3, ACNH, and INK with some friends and it was actually really fun! Is this how reading audiobooks feels?<br><br>one of my friends (who i won't name) put some glitter makeup on me during lunch! It looked decent for a bit until some glitter got in my eyes... this kept happening... i did happen to snap a photo tho! 💪 OH YEAH, ITS SPRING BREAKKKK (HAECK YEAHHH)!!! I don't think i have anything planned, so i prob won't have anything but images for the upcoming week. You never know, though!!<br><br>Oh, yeah! I got a spacehey account! you can find it in the contact area now!<br><br>I honestly think that was all that happened today.  </p>
+          <h4>~|--------------------|~</h4>
+            <h1>Photos, I guess</h1>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <input type="radio" name="carousel" id="slide1" checked>
+                    <input type="radio" name="carousel" id="slide2">
+                    <input type="radio" name="carousel" id="slide3">
+                    
+                    <div class="carousel-images">
+                        <div class="carousel-image">
+                            <img src="https://photos.fife.usercontent.google.com/pw/AP1GczNcpQxg-u-GOKVXmSjkFwddOkhzFKrRW3Mhrj-iBdoqjHyPrNP31w8Z=w717-h956-s-no-gm?authuser=0" alt="Image 1">
+                        </div>
+                        <div class="carousel-image">
+                            <img src="https://photos.fife.usercontent.google.com/pw/AP1GczPjg2sQfSb_hiD5qxHYUtWS1-w6S2h0LDldkBr3cgeGCtJu3LfTcHO1=w717-h956-s-no-gm?authuser=0" alt="Image 2">
+                        </div>
+                        <div class="carousel-image">
+                            <img src="https://photos.fife.usercontent.google.com/pw/AP1GczPx-EtSm_kP-5FmSScam4dySDEX8D1z1QAhjkSzz9DtmCrDvuDxsXqo=w717-h956-s-no-gm?authuser=0" alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                </div>
+            </div>
+          <h4>~|--------------------|~</h4>
+                  <h3>contact me!</h3>
+          <p>Genuinely sorry that there are not hyperlinks for these yet! Kinda in a rush while coding this... you will have to type these in until I update the site again. :{ <br>Tumblr (dm me): Ronikusu<br>GBATemp (DMS CLOSED!): Ronikusu<br>Osu!: Tvxnk <br>Spacehey:Tvxnk</p>
+        </div>
+    </div>
